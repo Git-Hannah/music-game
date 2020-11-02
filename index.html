@@ -12,8 +12,20 @@
 <!--Instrument Buttons-->
     <section>
         <div class="instruments">
-            <button class="btn">Trumpet</button>
 
+        <audio id='trumpet'>
+            <source src="../audiofiles/temporary-trumpet.mp3" type="audio/mpeg">
+        </audio>
+        <p>Click the buttons to play the instruments</p>            
+        <button onclick="playAudio()" type="button" class="#">Trumpet</button>
+           
+        <audio id='kazoo'>
+                <source src="../audiofiles/temporary-kazoo.mp3" type="audio/mpeg">
+        </audio>
+        <button onclick="playAudio()" type="button" class="#">Kazoo</button>               
+                 
+
+           
         </div>
 
     </section>
