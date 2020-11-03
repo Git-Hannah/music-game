@@ -2,6 +2,7 @@ console.log('hello test');
 
 const trumpet = document.getElementById("trumpet");   
 function playTrumpet() { 
+  console.log("trumpet plays")
     trumpet.play(); 
 } 
 function pauseTrumpet() { 
@@ -18,6 +19,7 @@ function pauseKazoo() {
 
 const concert = document.getElementById("concert");
 function randomInstruments() {
-  let randomIn = [];
-  
+  console.log("randomInstruments");
+  let randomPlaylist = ["trumpet", "kazoo"];
+
 }
