@@ -1,32 +1,23 @@
 console.log('hello test');
 
-const trumpet = document.getElementById("trumpet");
-   
-function playAudio() { 
+const trumpet = document.getElementById("trumpet");   
+function playTrumpet() { 
     trumpet.play(); 
 } 
-
-function pauseAudio() { 
+function pauseTrumpet() { 
     trumpet.pause(); 
 } 
 
-const tkazoo = document.getElementById("kazoo");
-
-function playAudio() {
+const kazoo = document.getElementById("kazoo");
+function playKazoo() {
   kazoo.play();
-}​
-
-function pauseAudio() {
+}
+function pauseKazoo() {
   kazoo.pause();
-}​
+}
 
-// const anotherSound = document.getElementById("another-sound");​
-
-// function playAudio() {
-//   anotherSound.play();
-// }​
-
-// function pauseAudio() {
-//   anotherSound.pause();
-// }
-
+const concert = document.getElementById("concert");
+function randomInstruments() {
+  let randomIn = [];
+  
+}
