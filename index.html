@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Game Ironhack Project of Hannah</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <h1>This is the Music Game</h1>
+    <p>Listen to the instruments and record the same order to win points!</p>
 
 <!--Instrument Buttons-->
     <section>
@@ -26,15 +28,27 @@
                 <source src="/audiofiles/temporary-kazoo.mp3" type="audio/mpeg">
             </audio>
             <button onclick="playKazoo()" type="button">Kazoo</button>               
-                            
+            
+            <button>
+                Placeholder
+            </button>
+            <button>
+                Placeholder
+            </button>
+
         </div>
 
     </section>
 
 <!--Play Buttons and Score-->
     <section>
-        <button onClick="playConcert()" id="concert" type="button">
+        <h3>Click 'Concert' to play a concert!</h3>
+        <button onClick="onPlayConcert()" id="concert" type="button">
             Concert
+        </button>
+        <h3>Click 'Record' to record your guess!</h3>
+        <button onClick="record()" id="record" type="button">
+            Record
         </button>
 
     </section>
@@ -46,6 +60,8 @@
 
 
 
+    <script src="utility.js"></script>
     <script src="script.js"></script>
+    
 </body>
 </html>
