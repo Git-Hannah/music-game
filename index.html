@@ -15,14 +15,14 @@
 
             <p>Click the buttons to play the instruments</p>            
 
-
-            <audio controls preload="auto" id='trumpet'>
+            <!--player icon with: controls preload="auto"-->
+            <audio id='trumpet' value='trumpet'>
                 <source src="/audiofiles/temporary-trumpet.mp3" type="audio/mpeg">
             </audio>
             <button onclick="playTrumpet()" type="button">Trumpet</button>
                 
 
-            <audio controls preload="auto" id='kazoo'>
+            <audio id='kazoo' value='kazoo'>
                 <source src="/audiofiles/temporary-kazoo.mp3" type="audio/mpeg">
             </audio>
             <button onclick="playKazoo()" type="button">Kazoo</button>               
@@ -33,7 +33,7 @@
 
 <!--Play Buttons and Score-->
     <section>
-        <button id="concert" type="button">
+        <button onClick="playConcert()" id="concert" type="button">
             Concert
         </button>
 
