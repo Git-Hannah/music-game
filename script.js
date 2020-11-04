@@ -8,7 +8,27 @@ const trumpet = document.getElementById("trumpet");
 const kazoo = document.getElementById("kazoo");
 const instruments = [trumpet, kazoo];
 const concert = document.getElementById("concert");
-let guess = [];
+
+let availableInstruments = ['trumpet', 'kazoo', 'placeholder-1', 'placeholder-2'];
+
+let randomOrder = shuffleTracks(availableInstruments);
+console.log("CHEAT: " + randomOrder);
+let guess = []; //user guesses
+console.log("available instruments:" + availableInstruments);// available instruments werden hier irgendwie gecasht
+
+//let randomOrder = ['trumpet', 'kazoo', 'placeholder-1', 'placeholder-2'];
+
+// function generateInstrumentButtons(buttonInstruments) {
+//   let instrumentButtons = "";
+//   console.log(availableInstruments);
+//   for (let i = 0; i < availableInstruments.length; i++) {
+//     let newButton = "<button onclick=\"orderSelect('kazoo')\" id=\"btn-kazoo\" type=\"button\">Kazoo</button>";
+//     instrumentButtons = instrumentButtons + newButton;
+//     console.log(instrumentButtons);
+//   }
+//   document.getElementById("instrument-buttons").innerHTML = instrumentButtons;
+// }
+
 
 /* 
 Listener
@@ -30,7 +50,6 @@ function record() {
 }
 function playTrumpet() {
   console.log("trumpet plays");
-
   trumpet.play();
 }
 
@@ -58,4 +77,20 @@ function soundFinished(sound) {
   }
 }
 
+function orderSelect(instrument) {
+  guess.push(instrument);
+  console.log("user order: " + guess);
+  if (guess.length == randomOrder.length) {
+    compare(randomOrder, guess);
+    guess = []; //Resets the game! Game is reset to zero, triggers restart of game
+  }
+}
+
 // TODO: WIN "Music to my ears!" /LOSE "Practice makes perfect!"
+
+// Wird nirgendwo aufgerufen, noch vom Start Game Button:
+function startGame() {
+  console.log("start game" + availableInstruments);
+  randomOrder = shuffleTracks(availableInstruments);
+  onPlayConcert();  
+}

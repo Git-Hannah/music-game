@@ -40,25 +40,47 @@
 
     </section>
 
-<!--Play Buttons and Score-->
+<!--User Guess Buttons-->    
     <section>
-        <h3>Click 'Concert' to play a concert!</h3>
-        <button onClick="onPlayConcert()" id="concert" type="button">
-            Concert
-        </button>
-        <h3>Click 'Record' to record your guess!</h3>
-        <button onClick="record()" id="record" type="button">
-            Record
-        </button>
+        <div class="instruments">
+
+            <p>Select instruments in order of concert order</p>          
+            
+            <!-- <button onclick="startGame()" id="btn-start">
+                Start Game
+            </button> -->
+
+            <button onclick="orderSelect('trumpet')" id="btn-trumpet" type="button">Trumpet</button>
+                
+            <button onclick="orderSelect('kazoo')" id="btn-kazoo" type="button">Kazoo</button>               
+            
+            <button onclick="orderSelect('placeholder-1')" id="btn-placeholder-1">
+                Placeholder
+            </button>
+            <button onclick="orderSelect('placeholder-2')" id="btn-placeholder-2">
+                Placeholder
+            </button>
+
+            <!-- <div id="instrument-buttons">
+                Instrument Buttons
+            </div> -->
+
+        </div>
 
     </section>
 
-<!--Reset Button-->
+<!--WIN LOSE Animation-->
     <section>
+        <div id="animation-box">
+            <div id="animation-box-topic">
+                Animation Topic
+            </div>
+            <div id="animation-box-details">
+                Animation Details
+            </div>
+        </div>
 
     </section>
-
-
 
     <script src="utility.js"></script>
     <script src="script.js"></script>
