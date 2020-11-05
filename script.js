@@ -1,22 +1,21 @@
 console.log("Fantastic Music Game!");
 
+/* Arrays
+--------------------------------------------------------*/
 let currentConcert = []; // the concert that will be created: array of references of instruments of concerts
 let posInConcert = -1; // Position in concert array: -1 concert not playing; >0 concert playing
 
+/* Variables
+--------------------------------------------------------*/
 const trumpet = document.getElementById("trumpet");
 const kazoo = document.getElementById("kazoo");
 const ukulele = document.getElementById("ukulele");
 const tambourine = document.getElementById("tambourine");
-//BUG?! :
 
 const instruments = [trumpet, kazoo, ukulele, tambourine];
 const concert = document.getElementById("concert");
-//BUG?! :
 
 let availableInstruments = ['trumpet', 'kazoo', 'ukulele', 'tambourine'];
-
-// H E R E !!!!!!!!!!!!!!!!!!!!!!!
-//HERE: instruments-array instead of string array??? or are the strings ids?
 
 let randomOrder = shuffleTracks([...availableInstruments]); //shuffles the availableInstruments - array
 //let randomOrderInstruments = shuffleTracks([...instruments]);
@@ -40,6 +39,9 @@ tambourine.addEventListener("ended", function () {
   soundFinished(tambourine);
 });
 
+
+/* Players
+---------------------------------------------------------*/
 // "Records" the selected button
 function record() {         //click on a certain element, it pushes the value of interface  
   guess.push(element.value);  //this runs until guess.length == randomsequence.length  
@@ -62,6 +64,8 @@ function playTambourine() {
   tambourine.play();
 }
 
+/* Shuffler
+--------------------------------------------------------*/
 // plays the random order of sounds:
 function onPlayConcert() {  
     console.log("play Concert");
@@ -74,6 +78,8 @@ function onPlayConcert() {
     console.log("ready to choose order");
 }
 
+/* Finisher
+--------------------------------------------------------*/
 // Triggered by end of audio:
 function soundFinished(sound) {
   console.log("ende von sound + ", sound);
@@ -88,6 +94,8 @@ function soundFinished(sound) {
   }
 }
 
+/* Selector and Comparer
+--------------------------------------------------------*/
 // selects and logs the instruments in the order of the clicks of the user
 function orderSelect(instrument) {
   switch (instrument) {
@@ -104,11 +112,13 @@ function orderSelect(instrument) {
       guess.push(tambourine);
       break;    
   }
-  //guess.push(instrument);
+  //guess.push(instrument);  //old variant, bettered by switch statement above
   console.log("user order: " + guess);
   if (guess.length == randomOrder.length) {
 
-    //changed randomOrder to currentConcert to maybe fix comparison:
+    //changed randomOrder to currentConcert to DEFINITELY fix comparison:
+    //YAY I KNEW WHAT TO CHANGE!!! Just not quite how :o) help is good!
+
     compare(currentConcert, guess);    // calls the compare function in utility.js
     //guess = []; //Resets the game! Game is reset to zero, triggers restart of game
   }
@@ -117,6 +127,9 @@ function orderSelect(instrument) {
 
 
 
+
+// OLD CODE
+// left it in to show how very hard I worked ;o) 
 // Wird nirgendwo aufgerufen, BLeibsel von Start Game Button:
 // function startGame() {
 //   console.log("start game" + availableInstruments);

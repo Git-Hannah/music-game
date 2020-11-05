@@ -54,7 +54,6 @@ p {
     
 }
 
-
 .button {
 	background-color: rgb(179, 120, 25);
 	border-radius:28px;
@@ -106,20 +105,6 @@ p {
     padding-top: 100px;
 }
 
-
-
-
-
-
-
-.trumpet {   
-}
-.kazoo {
-}
-.ukulele {
-}
-.tambourine {
-}
 .user-guess-box {
     width: 1800px;
     margin: 0 auto;
