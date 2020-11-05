@@ -1,4 +1,4 @@
-
+// Shuffles elements in array
 function shuffleTracks(tracks) {
     let shuffled = [];
     let tracksCopy = tracks;
@@ -12,6 +12,7 @@ function shuffleTracks(tracks) {
   }
 
 // Compares two arrays
+// compares the randomOrder array to the user guess:
 function compare(random, guess){
     console.log(random);
     console.log(guess);

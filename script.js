@@ -1,9 +1,8 @@
-console.log("hello test");
+console.log("Fantastic Music Game!");
 
-let currentConcert = []; // the concert that was created: array of references of instruments of concerts
-let posInConcert = -1; // -1 concert not playing; >0 concert playing
+let currentConcert = []; // the concert that will be created: array of references of instruments of concerts
+let posInConcert = -1; // Position in concert array: -1 concert not playing; >0 concert playing
 
-const recordButton = document.getElementById("record");
 const trumpet = document.getElementById("trumpet");
 const kazoo = document.getElementById("kazoo");
 const instruments = [trumpet, kazoo];
@@ -11,27 +10,14 @@ const concert = document.getElementById("concert");
 
 let availableInstruments = ['trumpet', 'kazoo', 'placeholder-1', 'placeholder-2'];
 
-let randomOrder = shuffleTracks(availableInstruments);
+let randomOrder = shuffleTracks(availableInstruments); //shuffles the availableInstruments - array
 console.log("CHEAT: " + randomOrder);
 let guess = []; //user guesses
 console.log("available instruments:" + availableInstruments);// available instruments werden hier irgendwie gecasht
 
-//let randomOrder = ['trumpet', 'kazoo', 'placeholder-1', 'placeholder-2'];
-
-// function generateInstrumentButtons(buttonInstruments) {
-//   let instrumentButtons = "";
-//   console.log(availableInstruments);
-//   for (let i = 0; i < availableInstruments.length; i++) {
-//     let newButton = "<button onclick=\"orderSelect('kazoo')\" id=\"btn-kazoo\" type=\"button\">Kazoo</button>";
-//     instrumentButtons = instrumentButtons + newButton;
-//     console.log(instrumentButtons);
-//   }
-//   document.getElementById("instrument-buttons").innerHTML = instrumentButtons;
-// }
-
 
 /* 
-Listener
+Listeners
 --------------------------------------------------------
 */
 trumpet.addEventListener("ended", function () {
@@ -43,20 +29,21 @@ kazoo.addEventListener("ended", function () {
 });
 
 //Records the button
-function record() {
-  //click on a certain element, it pushes the value of interface
-  guess.push(element.value);
-  //this runs until guess.length == randomsequence.length
+function record() {         //click on a certain element, it pushes the value of interface  
+  guess.push(element.value);  //this runs until guess.length == randomsequence.length  
 }
+// plays trumpet sound of html
 function playTrumpet() {
   console.log("trumpet plays");
   trumpet.play();
 }
 
+// plays kazoo sound of html
 function playKazoo() {
   kazoo.play();
 }
 
+// plays the random order of sounds:
 function onPlayConcert() {
   currentConcert = shuffleTracks([...instruments]);
   posInConcert = 0;
@@ -77,20 +64,39 @@ function soundFinished(sound) {
   }
 }
 
+// selects and logs the instruments in the order of the clicks of the user
 function orderSelect(instrument) {
   guess.push(instrument);
   console.log("user order: " + guess);
   if (guess.length == randomOrder.length) {
-    compare(randomOrder, guess);
+    compare(randomOrder, guess);    // calls the compare function in utility.js
     guess = []; //Resets the game! Game is reset to zero, triggers restart of game
   }
 }
 
-// TODO: WIN "Music to my ears!" /LOSE "Practice makes perfect!"
 
-// Wird nirgendwo aufgerufen, noch vom Start Game Button:
+
+
+// Wird nirgendwo aufgerufen, BLeibsel von Start Game Button:
 function startGame() {
   console.log("start game" + availableInstruments);
   randomOrder = shuffleTracks(availableInstruments);
   onPlayConcert();  
 }
+
+//OLD version:
+//let randomOrder = ['trumpet', 'kazoo', 'placeholder-1', 'placeholder-2'];
+//Failed attempt in generating buttons:
+// function generateInstrumentButtons(buttonInstruments) {
+//   let instrumentButtons = "";
+//   console.log(availableInstruments);
+//   for (let i = 0; i < availableInstruments.length; i++) {
+//     let newButton = "<button onclick=\"orderSelect('kazoo')\" id=\"btn-kazoo\" type=\"button\">Kazoo</button>";
+//     instrumentButtons = instrumentButtons + newButton;
+//     console.log(instrumentButtons);
+//   }
+//   document.getElementById("instrument-buttons").innerHTML = instrumentButtons;
+// }
+
+// OLD Solution, now all different
+//const recordButton = document.getElementById("record");
