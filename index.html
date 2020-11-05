@@ -8,58 +8,69 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>This is the Music Game</h1>
-    <p>Listen to the instruments and record the same order to win points!</p>
+    <h1>This Is The Fantastic Music Game</h1>
+    <p>Listen to the instruments and record the same order to win!</p>
 
 <!--Instrument Buttons-->
     <section>
         <div class="instruments">
 
-            <p>Click the buttons to play the instruments</p>            
+            <p>Click the buttons to listen to the instruments: </p>            
 
-            <!--player icon with: controls preload="auto"-->
-            <audio id='trumpet' value='trumpet'>
-                <source src="/audiofiles/temporary-trumpet.mp3" type="audio/mpeg">
+            <!--Adds a music-player interface, but I don't want that: player icon with: controls preload="auto"-->
+    <!--Trumpet-->       
+            <audio id='trumpet'>
+                <source src="/audiofiles/Trumpet-sound.mp3" type="audio/mpeg">
+                <source src="/audiofiles/Trumpet-sound.ogg" type="audio/ogg">
             </audio>
-            <button onclick="playTrumpet()" type="button">Trumpet</button>
-                
+            <button onclick="playTrumpet()" type="button">Trumpet</button>   
 
-            <audio id='kazoo' value='kazoo'>
-                <source src="/audiofiles/temporary-kazoo.mp3" type="audio/mpeg">
+    <!--Kazoo-->       
+            <audio id='kazoo'>
+                <source src="/audiofiles/Kazoo-sound.mp3" type="audio/mpeg">
+                <source src="/audiofiles/Kazoo-sound.ogg" type="audio/ogg">
             </audio>
-            <button onclick="playKazoo()" type="button">Kazoo</button>               
+            <button onclick="playKazoo()" type="button">Kazoo</button>  
+
+    <!--Ukulele-->   
+            <audio id='ukulele'>
+                <source src="/audiofiles/Ukulele-sound.mp3" type="audio/mpeg">
+                <source src="/audiofiles/Ukulele-sound.ogg" type="audio/ogg">
+            </audio>
+            <button onclick="playUkulele()" type="button">Ukulele</button>        
             
-            <button>
-                Placeholder
-            </button>
-            <button>
-                Placeholder
-            </button>
+    <!--Tambourine-->    
+            <audio id='tambourine'>
+                <source src="/audiofiles/Tambourine-sound.mp3" type="audio/mpeg">
+                <source src="/audiofiles/Tambourine-sound.ogg" type="audio/ogg">
+            </audio>
+            <button onclick="playTambourine()" type="button">Tambourine</button>        
 
         </div>
+    </section>
 
+    <section>
+        <div>
+            <button onclick="onPlayConcert()" id="concert" type="button" >
+                Concert
+            </button>
+        </div>
     </section>
 
 <!--User Guess Buttons-->    
     <section>
         <div class="instruments">
 
-            <p>Select instruments in order of concert order</p>          
+            <p>Listen to the order of the sounds, then click on these buttons in the same order to win: </p>          
             
             <!-- <button onclick="startGame()" id="btn-start">
                 Start Game
             </button> -->
 
-            <button onclick="orderSelect('trumpet')" id="btn-trumpet" type="button">Trumpet</button>
-                
-            <button onclick="orderSelect('kazoo')" id="btn-kazoo" type="button">Kazoo</button>               
-            
-            <button onclick="orderSelect('placeholder-1')" id="btn-placeholder-1">
-                Placeholder
-            </button>
-            <button onclick="orderSelect('placeholder-2')" id="btn-placeholder-2">
-                Placeholder
-            </button>
+            <button onclick="orderSelect('trumpet')" id="btn-trumpet" type="button">Trumpet</button>                
+            <button onclick="orderSelect('kazoo')" id="btn-kazoo" type="button">Kazoo</button>            
+            <button onclick="orderSelect('ukulele')" id="btn-ukulele" type="button">Ukulele</button>
+            <button onclick="orderSelect('tambourine')" id="btn-tambourine" type="button">Tambourine</button>
 
             <!-- <div id="instrument-buttons">
                 Instrument Buttons

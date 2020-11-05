@@ -5,10 +5,13 @@ let posInConcert = -1; // Position in concert array: -1 concert not playing; >0 
 
 const trumpet = document.getElementById("trumpet");
 const kazoo = document.getElementById("kazoo");
-const instruments = [trumpet, kazoo];
+const ukulele = document.getElementById("ukulele");
+const tambourine = document.getElementById("tambourine");
+//BUG?! :
+const instruments = [trumpet, kazoo, ukulele, tambourine];
 const concert = document.getElementById("concert");
-
-let availableInstruments = ['trumpet', 'kazoo', 'placeholder-1', 'placeholder-2'];
+//BUG?! :
+let availableInstruments = ['trumpet', 'kazoo', 'ukulele', 'tambourine'];
 
 let randomOrder = shuffleTracks(availableInstruments); //shuffles the availableInstruments - array
 console.log("CHEAT: " + randomOrder);
@@ -16,19 +19,22 @@ let guess = []; //user guesses
 console.log("available instruments:" + availableInstruments);// available instruments werden hier irgendwie gecasht
 
 
-/* 
-Listeners
---------------------------------------------------------
-*/
+/* Listeners
+--------------------------------------------------------*/
 trumpet.addEventListener("ended", function () {
   soundFinished(trumpet);
 });
-
 kazoo.addEventListener("ended", function () {
   soundFinished(kazoo);
 });
+ukulele.addEventListener("ended", function () {
+  soundFinished(ukulele);
+});
+tambourine.addEventListener("ended", function () {
+  soundFinished(tambourine);
+});
 
-//Records the button
+// "Records" the selected button
 function record() {         //click on a certain element, it pushes the value of interface  
   guess.push(element.value);  //this runs until guess.length == randomsequence.length  
 }
@@ -37,10 +43,17 @@ function playTrumpet() {
   console.log("trumpet plays");
   trumpet.play();
 }
-
 // plays kazoo sound of html
 function playKazoo() {
   kazoo.play();
+}
+// plays ukulele sound of html
+function playUkulele() {
+  ukulele.play();
+}
+// plays tambourine sound of html
+function playTambourine() {
+  tambourine.play();
 }
 
 // plays the random order of sounds:
@@ -50,7 +63,7 @@ function onPlayConcert() {
   currentConcert[0].play();
 }
 
-// Triggered by end of audio
+// Triggered by end of audio:
 function soundFinished(sound) {
   console.log("ende von sound + ", sound);
   if (posInConcert !== -1) {
@@ -78,11 +91,11 @@ function orderSelect(instrument) {
 
 
 // Wird nirgendwo aufgerufen, BLeibsel von Start Game Button:
-function startGame() {
-  console.log("start game" + availableInstruments);
-  randomOrder = shuffleTracks(availableInstruments);
-  onPlayConcert();  
-}
+// function startGame() {
+//   console.log("start game" + availableInstruments);
+//   randomOrder = shuffleTracks(availableInstruments);
+//   onPlayConcert();  
+// }
 
 //OLD version:
 //let randomOrder = ['trumpet', 'kazoo', 'placeholder-1', 'placeholder-2'];
