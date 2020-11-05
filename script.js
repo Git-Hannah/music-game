@@ -19,6 +19,7 @@ let availableInstruments = ['trumpet', 'kazoo', 'ukulele', 'tambourine'];
 //HERE: instruments-array instead of string array??? or are the strings ids?
 
 let randomOrder = shuffleTracks([...availableInstruments]); //shuffles the availableInstruments - array
+//let randomOrderInstruments = shuffleTracks([...instruments]);
 console.log("CHEAT: " + randomOrder);
 let guess = []; //user guesses
 console.log("available instruments:" + availableInstruments);// available instruments werden hier irgendwie gecasht
@@ -62,13 +63,15 @@ function playTambourine() {
 }
 
 // plays the random order of sounds:
-function onPlayConcert() {
-  console.log("play Concert");
+function onPlayConcert() {  
+    console.log("play Concert");
+  guess = []; 
   currentConcert = shuffleTracks([...instruments]);
   posInConcert = 0;
-  console.log("current Concert" + currentConcert[0]);
+    console.log("current Concert" + currentConcert[0]);
   currentConcert[0].play();
-  console.log(currentConcert[0]);
+  //console.log(currentConcert[0]);
+    console.log("ready to choose order");
 }
 
 // Triggered by end of audio:
@@ -87,13 +90,27 @@ function soundFinished(sound) {
 
 // selects and logs the instruments in the order of the clicks of the user
 function orderSelect(instrument) {
-  guess.push(instrument);
+  switch (instrument) {
+    case 'trumpet': 
+      guess.push(trumpet);
+      break;
+    case 'kazoo': 
+      guess.push(kazoo);
+      break;
+    case 'ukulele': 
+      guess.push(ukulele);
+      break;
+    case 'tambourine': 
+      guess.push(tambourine);
+      break;    
+  }
+  //guess.push(instrument);
   console.log("user order: " + guess);
   if (guess.length == randomOrder.length) {
 
     //changed randomOrder to currentConcert to maybe fix comparison:
     compare(currentConcert, guess);    // calls the compare function in utility.js
-    guess = []; //Resets the game! Game is reset to zero, triggers restart of game
+    //guess = []; //Resets the game! Game is reset to zero, triggers restart of game
   }
 }
 

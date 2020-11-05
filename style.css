@@ -1,24 +1,77 @@
-html {
-    background-color: rgb(144, 231, 44);
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap');
 
+
+html, body {
+    margin: 40px;
+    padding: 0;
+}
+body {
+    background-color: rgb(238, 230, 115);
+    font-family: Nunito Sans, sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.note {
+    height: 300px;
+    width: 300px;
+    padding-right: 100px;
+}
+h1, h2, h3, p {
+    color: rgb(179, 120, 25);
+}
+h1 {
+    font-size: 4rem;
+}
+p {
+    font-size: 2rem;
+}
 .instruments {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 30px;
 }
-.instrument-btn {
+.instrument-btn img {
     height: 300px;
     width: 300px;
     background: #9b4646;
 }
-.trumpet {
-    background-image: url("./images/Trumpet.jpg");
+.trumpet {   
 }
 .kazoo {
-    background-image: url("./images/Kazoo.jpg");
 }
 .ukulele {
-    background-image: url("./images/Ukulele.jpg");
 }
 .tambourine {
-    background-image: url("./images/Tambourine.")
 }
+.user-guess-box {
+}
+
+.button {
+	background-color: rgb(179, 120, 25);
+	border-radius:28px;
+	border:3px solid rgb(255, 229, 187);
+	display:inline-block;
+	cursor:pointer;
+	color: rgb(255, 229, 187);
+	font-size:30px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.button:hover {
+	background-color: rgb(202, 166, 45);
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+#animation-box {
+    font-family: Nunito Sans, sans-serif;
+    font-size: 3rem;
+    color: rgb(179, 120, 25);
+}
+

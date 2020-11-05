@@ -8,58 +8,76 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>The Fantastic Music Game</h1>
+    <header>
+        <h1>The Fantastic Music Game</h1>
+        <img class="note" src="./images/Note.webp" alt="Music Note">
+    </header>
     <p>Listen to the instruments and record the same order to win!</p>
 
 <!--Instrument Buttons-->
     <section>
-        <div class="instruments">
-
+        
             <p>Click the buttons to listen to the instruments: </p>            
+        <div class="instruments">
 
             <!--Adds a music-player interface, but I don't want that: player icon with: controls preload="auto"-->
     <!--Trumpet-->       
             <audio id='trumpet'>
                 <source src="./audiofiles/Trumpet-sound.mp3" type="audio/mpeg">
                 <source src="./audiofiles/Trumpet-sound.ogg" type="audio/ogg">
-            </audio>
-            <div class="instrument-btn trumpet" onclick="playTrumpet()">Trumpet</div>   
+            </audio>        
+            <div class="instrument-btn trumpet" onclick="playTrumpet()">
+                <img src="./images/Trumpet.jpg" alt="Trumpet">
+            </div>   
 
     <!--Kazoo-->       
             <audio id='kazoo'>
                 <source src="./audiofiles/Kazoo-sound.mp3" type="audio/mpeg">
                 <source src="./audiofiles/Kazoo-sound.ogg" type="audio/ogg">
             </audio>
-            <div class="instrument-btn kazoo" onclick="playKazoo()">Kazoo</div>  
+            <div class="instrument-btn kazoo" onclick="playKazoo()">
+                <img src="./images/Kazoo.jpg" alt="Kazoo">                
+            </div>  
 
     <!--Ukulele-->   
             <audio id='ukulele'>
                 <source src="./audiofiles/Ukulele-sound.mp3" type="audio/mpeg">
                 <source src="./audiofiles/Ukulele-sound.ogg" type="audio/ogg">
             </audio>
-            <div class="instrument-btn ukulele" onclick="playUkulele()">Ukulele</div>        
+            <div class="instrument-btn ukulele" onclick="playUkulele()">
+                <img src="./images/Ukulele.jpg" alt="Ukulele">
+            </div>        
             
     <!--Tambourine-->    
             <audio id='tambourine'>
                 <source src="./audiofiles/Tambourine-sound.mp3" type="audio/mpeg">
                 <source src="./audiofiles/Tambourine-sound.ogg" type="audio/ogg">
             </audio>
-            <div class="instrument-btn tambourine" onclick="playTambourine()">Tambourine</div>        
+            <div class="instrument-btn tambourine" onclick="playTambourine()">
+                <img src="./images/Tambourine.jpg" alt="Tambourine">
+            </div>        
 
         </div>
     </section>
 
     <section>
-        <!-- <div>
+        <div>
             <button onclick="onPlayConcert()" id="concert" type="button" >
                 Concert
             </button>
-        </div> -->
+        </div>
     </section>
 
 <!--User Guess Buttons-->    
     <section>
-        <div class="instruments">
+        <div id="animation-box">
+            <div id="animation-box-topic">
+               Listen!
+            </div>            
+        </div>
+
+
+        <div class="user-guess-box">
 
             <p>Listen to the order of the sounds, then click on these buttons in the same order to win: </p>          
             
@@ -67,10 +85,10 @@
                 Start Game
             </button> -->
 
-            <button onclick="orderSelect('trumpet')" id="btn-trumpet" type="button">Trumpet</button>                
-            <button onclick="orderSelect('kazoo')" id="btn-kazoo" type="button">Kazoo</button>            
-            <button onclick="orderSelect('ukulele')" id="btn-ukulele" type="button">Ukulele</button>
-            <button onclick="orderSelect('tambourine')" id="btn-tambourine" type="button">Tambourine</button>
+            <button class="button" onclick="orderSelect('trumpet')" id="btn-trumpet" type="button">Trumpet</button>                
+            <button class="button" onclick="orderSelect('kazoo')" id="btn-kazoo" type="button">Kazoo</button>            
+            <button class="button" onclick="orderSelect('ukulele')" id="btn-ukulele" type="button">Ukulele</button>
+            <button class="button" onclick="orderSelect('tambourine')" id="btn-tambourine" type="button">Tambourine</button>
 
             <!-- <div id="instrument-buttons">
                 Instrument Buttons
@@ -82,16 +100,17 @@
 
 <!--WIN LOSE Animation-->
     <section>
-        <div id="animation-box">
-            <div id="animation-box-topic">
-                Animation Topic
-            </div>
+        <div id="animation-box">            
             <div id="animation-box-details">
-                Animation Details
+                Which sounds do you hear in which order?
             </div>
         </div>
 
     </section>
+
+    <footer>
+        <p>HannaHannaHannaHannaHannaHannaHannaHannaHannaHannaHannaHannaHannaHannaHannaH</p>
+    </footer>
 
     <script src="utility.js"></script>
     <script src="script.js"></script>

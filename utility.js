@@ -1,5 +1,6 @@
 // Shuffles elements in array
 function shuffleTracks(tracks) {
+    console.log("NEW SHUFFLE ORDER: " + tracks)
     let shuffled = [];
     let tracksCopy = tracks;
     while (tracksCopy.length > 0) {
