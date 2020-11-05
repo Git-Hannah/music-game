@@ -1,13 +1,24 @@
 html {
-    background-color: aqua;
+    background-color: rgb(144, 231, 44);
 }
 
 .instruments {
     margin-top: 30px;
 }
-.btn {
-    background: #f7f7f7;
+.instrument-btn {
+    height: 300px;
+    width: 300px;
+    background: #9b4646;
 }
 .trumpet {
-    
+    background-image: url("./images/Trumpet.jpg");
+}
+.kazoo {
+    background-image: url("./images/Kazoo.jpg");
+}
+.ukulele {
+    background-image: url("./images/Ukulele.jpg");
+}
+.tambourine {
+    background-image: url("./images/Tambourine.")
 }

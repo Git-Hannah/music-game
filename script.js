@@ -8,12 +8,17 @@ const kazoo = document.getElementById("kazoo");
 const ukulele = document.getElementById("ukulele");
 const tambourine = document.getElementById("tambourine");
 //BUG?! :
+
 const instruments = [trumpet, kazoo, ukulele, tambourine];
 const concert = document.getElementById("concert");
 //BUG?! :
+
 let availableInstruments = ['trumpet', 'kazoo', 'ukulele', 'tambourine'];
 
-let randomOrder = shuffleTracks(availableInstruments); //shuffles the availableInstruments - array
+// H E R E !!!!!!!!!!!!!!!!!!!!!!!
+//HERE: instruments-array instead of string array??? or are the strings ids?
+
+let randomOrder = shuffleTracks([...availableInstruments]); //shuffles the availableInstruments - array
 console.log("CHEAT: " + randomOrder);
 let guess = []; //user guesses
 console.log("available instruments:" + availableInstruments);// available instruments werden hier irgendwie gecasht
@@ -58,9 +63,12 @@ function playTambourine() {
 
 // plays the random order of sounds:
 function onPlayConcert() {
+  console.log("play Concert");
   currentConcert = shuffleTracks([...instruments]);
   posInConcert = 0;
+  console.log("current Concert" + currentConcert[0]);
   currentConcert[0].play();
+  console.log(currentConcert[0]);
 }
 
 // Triggered by end of audio:
@@ -82,7 +90,9 @@ function orderSelect(instrument) {
   guess.push(instrument);
   console.log("user order: " + guess);
   if (guess.length == randomOrder.length) {
-    compare(randomOrder, guess);    // calls the compare function in utility.js
+
+    //changed randomOrder to currentConcert to maybe fix comparison:
+    compare(currentConcert, guess);    // calls the compare function in utility.js
     guess = []; //Resets the game! Game is reset to zero, triggers restart of game
   }
 }

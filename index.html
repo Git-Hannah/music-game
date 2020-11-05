@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>This Is The Fantastic Music Game</h1>
+    <h1>The Fantastic Music Game</h1>
     <p>Listen to the instruments and record the same order to win!</p>
 
 <!--Instrument Buttons-->
@@ -23,38 +23,38 @@
                 <source src="./audiofiles/Trumpet-sound.mp3" type="audio/mpeg">
                 <source src="./audiofiles/Trumpet-sound.ogg" type="audio/ogg">
             </audio>
-            <button onclick="playTrumpet()" type="button">Trumpet</button>   
+            <div class="instrument-btn trumpet" onclick="playTrumpet()">Trumpet</div>   
 
     <!--Kazoo-->       
             <audio id='kazoo'>
                 <source src="./audiofiles/Kazoo-sound.mp3" type="audio/mpeg">
                 <source src="./audiofiles/Kazoo-sound.ogg" type="audio/ogg">
             </audio>
-            <button onclick="playKazoo()" type="button">Kazoo</button>  
+            <div class="instrument-btn kazoo" onclick="playKazoo()">Kazoo</div>  
 
     <!--Ukulele-->   
             <audio id='ukulele'>
                 <source src="./audiofiles/Ukulele-sound.mp3" type="audio/mpeg">
                 <source src="./audiofiles/Ukulele-sound.ogg" type="audio/ogg">
             </audio>
-            <button onclick="playUkulele()" type="button">Ukulele</button>        
+            <div class="instrument-btn ukulele" onclick="playUkulele()">Ukulele</div>        
             
     <!--Tambourine-->    
             <audio id='tambourine'>
                 <source src="./audiofiles/Tambourine-sound.mp3" type="audio/mpeg">
                 <source src="./audiofiles/Tambourine-sound.ogg" type="audio/ogg">
             </audio>
-            <button onclick="playTambourine()" type="button">Tambourine</button>        
+            <div class="instrument-btn tambourine" onclick="playTambourine()">Tambourine</div>        
 
         </div>
     </section>
 
     <section>
-        <div>
+        <!-- <div>
             <button onclick="onPlayConcert()" id="concert" type="button" >
                 Concert
             </button>
-        </div>
+        </div> -->
     </section>
 
 <!--User Guess Buttons-->    
