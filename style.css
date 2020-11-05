@@ -11,7 +11,8 @@ body {
 }
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding-left: 100px;
 }
 .note {
     height: 300px;
@@ -20,25 +21,97 @@ header {
 }
 h1, h2, h3, p {
     color: rgb(179, 120, 25);
+    text-align: center;
 }
 h1 {
-    font-size: 4rem;
+    font-size: 6rem;
 }
 p {
-    font-size: 2rem;
+    font-size: 3rem;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+    text-align: center;
+    line-height: 5rem;
+
 }
 .instruments {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-top: 30px;
+    width: 2100px;
+    margin: 0 auto;
+    padding: 75px 10px;
 }
 .instrument-btn img {
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     background: #9b4646;
+    
 }
+
+
+.button {
+	background-color: rgb(179, 120, 25);
+	border-radius:28px;
+	border:3px solid rgb(255, 229, 187);
+	display:inline-block;
+	cursor:pointer;
+    color: rgb(255, 229, 187);
+    font-family: Nunito Sans, sans-serif;
+	font-size:60px;
+	padding:16px 31px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+    
+}
+.button:hover {
+	background-color: rgb(202, 166, 45);
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+.concert-button {
+    background-color: rgb(100, 67, 13);
+	border-radius: 50%;
+	border:3px solid rgb(255, 229, 187);
+	display:inline-block;
+	cursor:pointer;
+    color: rgb(255, 229, 187);
+    font-family: Nunito Sans, sans-serif;
+	font-size:100px;
+	padding: 50px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+}
+.concert-button:hover {
+    background-color: rgb(202, 166, 45);
+}
+
+
+#animation-box {
+    font-family: Nunito Sans, sans-serif;
+    font-size: 3rem;
+    color: rgb(179, 120, 25);
+    padding-top: 80px;
+}
+
+.footer {
+    padding-top: 100px;
+}
+
+
+
+
+
+
+
 .trumpet {   
 }
 .kazoo {
@@ -48,30 +121,9 @@ p {
 .tambourine {
 }
 .user-guess-box {
+    width: 1800px;
+    margin: 0 auto;
+    justify-items: center;
+    text-align: center;
+    line-height: 5rem;
 }
-
-.button {
-	background-color: rgb(179, 120, 25);
-	border-radius:28px;
-	border:3px solid rgb(255, 229, 187);
-	display:inline-block;
-	cursor:pointer;
-	color: rgb(255, 229, 187);
-	font-size:30px;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
-}
-.button:hover {
-	background-color: rgb(202, 166, 45);
-}
-.button:active {
-	position:relative;
-	top:1px;
-}
-#animation-box {
-    font-family: Nunito Sans, sans-serif;
-    font-size: 3rem;
-    color: rgb(179, 120, 25);
-}
-

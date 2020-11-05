@@ -31,12 +31,12 @@ function compare(random, guess){
 
 function winAnimation() {
    document.getElementById("animation-box-topic").innerText = "You Win!";
-   document.getElementById("animation-box-details").innerText = "Well Done! Play Again!";
+   document.getElementById("animation-box-details").innerText = "Well Done! Click Concert to Play Again!";
 }
    
 function loseAnimation() {
     document.getElementById("animation-box-topic").innerText = "You Lost!";
-    document.getElementById("animation-box-details").innerText = "Practice makes perfect! Play Again!";
+    document.getElementById("animation-box-details").innerText = "Practice makes perfect! Click Concert to Play Again!";
 }
 
 

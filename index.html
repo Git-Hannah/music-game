@@ -12,12 +12,12 @@
         <h1>The Fantastic Music Game</h1>
         <img class="note" src="./images/Note.webp" alt="Music Note">
     </header>
-    <p>Listen to the instruments and record the same order to win!</p>
+    <p>Listen to the instruments!</p>
 
 <!--Instrument Buttons-->
     <section>
         
-            <p>Click the buttons to listen to the instruments: </p>            
+            <p>Find out how the instruments sound: </p>            
         <div class="instruments">
 
             <!--Adds a music-player interface, but I don't want that: player icon with: controls preload="auto"-->
@@ -60,56 +60,47 @@
         </div>
     </section>
 
-    <section>
-        <div>
-            <button onclick="onPlayConcert()" id="concert" type="button" >
+<!--Start a Concert-->   
+    <section class="container">
+       
+            <button class="concert-button" onclick="onPlayConcert()" id="concert" title="click me!">
                 Concert
             </button>
-        </div>
+   
     </section>
 
-<!--User Guess Buttons-->    
+<!--WIN LOSE Animation-->
     <section>
-        <div id="animation-box">
+        <div id="animation-box" class="container">
             <div id="animation-box-topic">
                Listen!
             </div>            
         </div>
 
-
+<!--User Guess Buttons-->   
         <div class="user-guess-box">
-
-            <p>Listen to the order of the sounds, then click on these buttons in the same order to win: </p>          
-            
-            <!-- <button onclick="startGame()" id="btn-start">
-                Start Game
-            </button> -->
-
+            <p>Which instruments do you hear in which order?</p>          
+    
             <button class="button" onclick="orderSelect('trumpet')" id="btn-trumpet" type="button">Trumpet</button>                
             <button class="button" onclick="orderSelect('kazoo')" id="btn-kazoo" type="button">Kazoo</button>            
             <button class="button" onclick="orderSelect('ukulele')" id="btn-ukulele" type="button">Ukulele</button>
             <button class="button" onclick="orderSelect('tambourine')" id="btn-tambourine" type="button">Tambourine</button>
-
-            <!-- <div id="instrument-buttons">
-                Instrument Buttons
-            </div> -->
-
+       
         </div>
-
     </section>
 
 <!--WIN LOSE Animation-->
     <section>
-        <div id="animation-box">            
+        <div id="animation-box" class="container">            
             <div id="animation-box-details">
-                Which sounds do you hear in which order?
+                Click on the names in the right order to win!
             </div>
         </div>
 
     </section>
 
-    <footer>
-        <p>HannaHannaHannaHannaHannaHannaHannaHannaHannaHannaHannaHannaHannaHannaHannaH</p>
+    <footer class="footer">
+        <p>Game by Hannah</p>
     </footer>
 
     <script src="utility.js"></script>
