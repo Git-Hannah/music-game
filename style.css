@@ -20,7 +20,7 @@ header {
     padding-right: 100px;
 }
 h1, h2, h3, p {
-    color: rgb(179, 120, 25);
+    color: #b37819;
     text-align: center;
 }
 h1 {
@@ -103,6 +103,11 @@ p {
 
 .footer {
     padding-top: 100px;
+}
+.footer a {
+    text-decoration: none;
+    color: #b37819;
+    font-size: 5rem;
 }
 
 .user-guess-box {
