@@ -12,6 +12,7 @@ Choose the instrument in the order you hear them
 
 Train your ears and enjoy your own concerts!
 
+[Game](https://git-hannah.github.io/music-game/)
 
 Grüße von Hannah
 
